@@ -17,9 +17,14 @@ const LayoutWrapper = props => {
 
   // ** Store Vars
   const dispatch = useDispatch()
+<<<<<<< HEAD
   const store = useSelector(state => state)
   const navbarStore = store.navbar
   const contentWidth = store.layout.contentWidth
+=======
+  const navbarStore = useSelector(state => state.navbar)
+  const contentWidth = useSelector(state => state.layout.contentWidth)
+>>>>>>> 13e913d (Actualización)
 
   //** Vars
   const Tag = layout === 'HorizontalLayout' && !appLayout ? 'div' : Fragment
@@ -53,7 +58,11 @@ const LayoutWrapper = props => {
       }
     }
     return () => cleanUp()
+<<<<<<< HEAD
   }, [])
+=======
+  }, [routeMeta, dispatch])
+>>>>>>> 13e913d (Actualización)
 
   return (
     <div

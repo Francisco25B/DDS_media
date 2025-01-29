@@ -81,6 +81,7 @@ const HorizontalNavMenuGroup = props => {
       onMouseEnter={() => onMouseEnter(item.id)}
       onMouseLeave={() => onMouseLeave(item.id)}
     >
+<<<<<<< HEAD
       <DropdownToggle
         to='/'
         tag={Link}
@@ -95,6 +96,9 @@ const HorizontalNavMenuGroup = props => {
           <FormattedMessage id={item.title} />
         </span>
       </DropdownToggle>
+=======
+     
+>>>>>>> 13e913d (Actualización)
       <DropdownMenu tag='ul' modifiers={menuModifiers}>
         <HorizontalNavMenuItems
           submenu={true}

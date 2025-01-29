@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FileText, Circle } from 'react-feather'
 export default [
   {
@@ -218,3 +219,7 @@ export default [
     ]
   }
 ]
+=======
+
+  
+>>>>>>> 13e913d (Actualización)

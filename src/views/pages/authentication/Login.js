@@ -9,7 +9,10 @@ import { toast, Slide } from 'react-toastify'
 import { handleLogin } from '@store/actions/auth'
 import { AbilityContext } from '@src/utility/context/Can'
 import { Link, useHistory } from 'react-router-dom'
+<<<<<<< HEAD
 import InputPasswordToggle from '@components/input-password-toggle'
+=======
+>>>>>>> 13e913d (Actualización)
 import { getHomeRouteForLoggedInUser, isObjEmpty } from '@utils'
 import { Facebook, Twitter, Mail, GitHub, HelpCircle, Coffee } from 'react-feather'
 import {
@@ -26,7 +29,10 @@ import {
   Button,
   UncontrolledTooltip
 } from 'reactstrap'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13e913d (Actualización)
 import '@styles/base/pages/page-auth.scss'
 
 const ToastContent = ({ name, role }) => (
@@ -34,7 +40,11 @@ const ToastContent = ({ name, role }) => (
     <div className='toastify-header'>
       <div className='title-wrapper'>
         <Avatar size='sm' color='success' icon={<Coffee size={12} />} />
+<<<<<<< HEAD
         <h6 className='toast-title font-weight-bold'>Welcome, {name}</h6>
+=======
+        <h6 className='toast-title font-weight-bold'>Bienvenidos, {name}</h6>
+>>>>>>> 13e913d (Actualización)
       </div>
     </div>
     <div className='toastify-body'>
@@ -50,10 +60,15 @@ const Login = props => {
   const history = useHistory()
   const [email, setEmail] = useState('admin@demo.com')
   const [password, setPassword] = useState('admin')
+<<<<<<< HEAD
 
   const { register, errors, handleSubmit } = useForm()
   const illustration = skin === 'dark' ? 'login-v2-dark.svg' : 'login-v2.svg',
     source = require(`@src/assets/images/pages/${illustration}`).default
+=======
+  const [showPassword, setShowPassword] = useState(false)
+  const { register, errors, handleSubmit } = useForm()
+>>>>>>> 13e913d (Actualización)
 
   const onSubmit = data => {
     if (isObjEmpty(errors)) {
@@ -74,6 +89,7 @@ const Login = props => {
   }
 
   return (
+<<<<<<< HEAD
     <div className='auth-wrapper auth-v2'>
       <Row className='auth-inner m-0'>
         <Link className='brand-logo' to='/' onClick={e => e.preventDefault()}>
@@ -226,6 +242,50 @@ const Login = props => {
               <Button.Ripple className='mr-0' color='github'>
                 <GitHub size={14} />
               </Button.Ripple>
+=======
+    <div className="auth-wrapper auth-v2">
+      <Row className="auth-inner m-0">
+        <Col className="d-flex align-items-center auth-bg px-2 p-lg-5" lg="4" sm="12">
+          <Col className="px-xl-2 mx-auto" sm="8" md="6" lg="12">
+            <div className="container">
+              <div className="card">
+                <a className="login">Log in</a>
+                <form className="auth-login-form mt-2" onSubmit={handleSubmit(onSubmit)}>
+                  <div className="inputBox">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={e => setEmail(e.target.value)}
+                      required
+                    />
+                    <span className="user">Usuario</span>
+                  </div>
+                  <div className="inputBox" style={{ position: 'relative' }}>
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      value={password}
+                      onChange={e => setPassword(e.target.value)}
+                      required
+                      style={{ paddingRight: "40px" }}
+                    />
+                    <span className="password">Contraseña</span>
+                    {/* Botón de ver/ocultar contraseña */}
+                    <div className="toggle-border">
+                      <input 
+                        id="toggle-password" 
+                        type="checkbox" 
+                        checked={showPassword} 
+                        onChange={() => setShowPassword(!showPassword)} 
+                      />
+                      <label htmlFor="toggle-password">
+                        <div className="handle"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" className="enter">Enter</button>
+                </form>
+              </div>
+>>>>>>> 13e913d (Actualización)
             </div>
           </Col>
         </Col>
@@ -234,4 +294,8 @@ const Login = props => {
   )
 }
 
+<<<<<<< HEAD
 export default Login
+=======
+export default Login
+>>>>>>> 13e913d (Actualización)

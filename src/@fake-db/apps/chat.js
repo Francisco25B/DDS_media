@@ -8,7 +8,11 @@ const data = {
     id: 11,
     avatar: require('@src/assets/images/portrait/small/avatar-s-8.jpg').default,
     fullName: 'John Doe',
+<<<<<<< HEAD
     role: 'admin',
+=======
+    role: 2,
+>>>>>>> 13e913d (Actualización)
     about:
       'Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.',
     status: 'online',

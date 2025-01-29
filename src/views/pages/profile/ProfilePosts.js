@@ -39,6 +39,7 @@ const ProfilePosts = ({ data }) => {
                 </div>
                 <div className='d-flex align-items-center'>
                   <div className='avatar-group ml-1'>
+<<<<<<< HEAD
                     {post.likedUsers.map(user => {
                       return (
                         <Fragment key={user.username}>
@@ -58,6 +59,28 @@ const ProfilePosts = ({ data }) => {
                         </Fragment>
                       )
                     })}
+=======
+                  {post.likedUsers.map(user => {
+  return (
+    <Fragment key={user.id}>
+      <Avatar
+        className='pull-up'
+        img={user.avatar}
+        id={`${user.nombre.toLowerCase()}-${user.apellido.toLowerCase()}`}
+        imgHeight='26'
+        imgWidth='26'
+      />
+      <UncontrolledTooltip
+        target={`${user.nombre.toLowerCase()}-${user.apellido.toLowerCase()}`}
+        placement='top'
+      >
+        {user.nombre} {user.apellido}
+      </UncontrolledTooltip>
+    </Fragment>
+  )
+})}
+
+>>>>>>> 13e913d (Actualización)
                   </div>
                   <a href='/' className='text-muted text-nowrap ml-50' onClick={e => e.preventDefault()}>
                     +140 more

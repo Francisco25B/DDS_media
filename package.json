@@ -17,7 +17,11 @@
     "animate.css": "4.1.1",
     "apexcharts": "3.23.0",
     "availity-reactstrap-validation-safe": "2.6.1",
+<<<<<<< HEAD
     "axios": "0.21.1",
+=======
+    "axios": "^0.21.1",
+>>>>>>> 13e913d (Actualización)
     "axios-mock-adapter": "1.19.0",
     "babel-plugin-react-intl": "5.1.18",
     "bootstrap": "4.5.2",
@@ -37,6 +41,10 @@
     "jsonwebtoken": "8.5.1",
     "leaflet": "^1.9.4",
     "moment": "2.29.1",
+<<<<<<< HEAD
+=======
+    "nextjs-toast-notify": "^1.29.0",
+>>>>>>> 13e913d (Actualización)
     "nouislider": "14.6.2",
     "nouislider-react": "3.3.8",
     "postcss-rtl": "1.5.0",
@@ -54,6 +62,10 @@
     "react-feather": "~2.0.3",
     "react-flatpickr": "3.9.1",
     "react-hook-form": "6.15.1",
+<<<<<<< HEAD
+=======
+    "react-icons": "^5.4.0",
+>>>>>>> 13e913d (Actualización)
     "react-intl": "3.11.0",
     "react-leaflet": "3.1.0",
     "react-paginate": "7.0.0",
@@ -93,13 +105,22 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
+<<<<<<< HEAD
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "lint:fix": "eslint src/**/*.js --fix"
+=======
+    "lint": "eslint src/*/.js src/*/.jsx",
+    "lint:fix": "eslint src/*/.js --fix"
+>>>>>>> 13e913d (Actualización)
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "devDependencies": {
+<<<<<<< HEAD
+=======
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+>>>>>>> 13e913d (Actualización)
     "@types/sortablejs": "1.10.6",
     "eslint": "7.8.0",
     "eslint-plugin-import": "2.22.0",

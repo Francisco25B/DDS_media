@@ -21,11 +21,15 @@ const ThemeNavbar = props => {
 
   // ** Function to toggle Theme (Light/Dark)
   const ThemeToggler = () => {
+<<<<<<< HEAD
     if (skin === 'dark') {
       return <Sun className='ficon' onClick={() => setSkin('light')} />
     } else {
       return <Moon className='ficon' onClick={() => setSkin('dark')} />
     }
+=======
+  
+>>>>>>> 13e913d (Actualización)
   }
 
   return (
@@ -35,11 +39,15 @@ const ThemeNavbar = props => {
       </div>
       <ul className='nav navbar-nav align-items-center ml-auto'>
         <IntlDropdown />
+<<<<<<< HEAD
         <NavItem className='d-none d-lg-block'>
           <NavLink className='nav-link-style'>
             <ThemeToggler />
           </NavLink>
         </NavItem>
+=======
+        
+>>>>>>> 13e913d (Actualización)
         <NavbarSearch />
         <CartDropdown />
         <NotificationDropdown />

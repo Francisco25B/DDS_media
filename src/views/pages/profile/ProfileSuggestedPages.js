@@ -34,7 +34,11 @@ const ProfileSuggestedPages = ({ data }) => {
   return (
     <Card>
       <CardBody className='profile-suggestion'>
+<<<<<<< HEAD
         <h5 className='mb-2'>Suggested Pages</h5>
+=======
+        <h5 className='mb-2'>Suggested </h5>
+>>>>>>> 13e913d (Actualización)
         {renderSuggestions()}
       </CardBody>
     </Card>

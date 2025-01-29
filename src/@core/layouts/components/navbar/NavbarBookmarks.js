@@ -45,10 +45,14 @@ const NavbarBookmarks = props => {
           const IconTag = Icon[item.icon]
           return (
             <NavItem key={item.target} className='d-none d-lg-block'>
+<<<<<<< HEAD
               <NavLink tag={Link} to={item.link} id={item.target}>
                 <IconTag className='ficon' />
                 <UncontrolledTooltip target={item.target}>{item.title}</UncontrolledTooltip>
               </NavLink>
+=======
+              
+>>>>>>> 13e913d (Actualización)
             </NavItem>
           )
         })
@@ -65,9 +69,13 @@ const NavbarBookmarks = props => {
         <NavItem className='d-none d-lg-block'>
           <NavLink tag='span'>
             <UncontrolledDropdown>
+<<<<<<< HEAD
               <DropdownToggle tag='span'>
                 <Icon.ChevronDown className='ficon' />
               </DropdownToggle>
+=======
+             
+>>>>>>> 13e913d (Actualización)
               <DropdownMenu right>
                 {store.bookmarks
                   .map(item => {
@@ -137,6 +145,7 @@ const NavbarBookmarks = props => {
 
   return (
     <Fragment>
+<<<<<<< HEAD
       <ul className='navbar-nav d-xl-none'>
         <NavItem className='mobile-menu mr-auto'>
           <NavLink className='nav-menu-main menu-toggle hidden-xs is-active' onClick={() => setMenuVisibility(true)}>
@@ -220,6 +229,9 @@ const NavbarBookmarks = props => {
           </div>
         </NavItem>
       </ul>
+=======
+     
+>>>>>>> 13e913d (Actualización)
     </Fragment>
   )
 }

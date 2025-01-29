@@ -67,6 +67,10 @@ const Profile = () => {
         </div>
       ) : null}
     </Fragment>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 13e913d (Actualización)
   )
 }
 

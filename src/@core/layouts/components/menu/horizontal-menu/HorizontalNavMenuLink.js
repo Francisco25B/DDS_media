@@ -61,10 +61,14 @@ const HorizontalNavMenuLink = ({
       onClick={resetOpenDropdowns}
     >
       <LinkTag
+<<<<<<< HEAD
         className={classnames('d-flex align-items-center', {
           'dropdown-item': isChild,
           'nav-link': !isChild
         })}
+=======
+       
+>>>>>>> 13e913d (Actualización)
         tag={LinkTag}
         target={item.newTab ? '_blank' : undefined}
         /*eslint-disable */

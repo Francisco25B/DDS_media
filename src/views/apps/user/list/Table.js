@@ -1,14 +1,26 @@
+<<<<<<< HEAD
 // ** React Imports
+=======
+>>>>>>> 13e913d (Actualización)
 import { Fragment, useState, useEffect } from 'react'
 
 // ** Invoice List Sidebar
 import Sidebar from './Sidebar'
+<<<<<<< HEAD
+=======
+import { FaPlus } from 'react-icons/fa'
+
+>>>>>>> 13e913d (Actualización)
 
 // ** Columns
 import { columns } from './columns'
 
 // ** Store & Actions
+<<<<<<< HEAD
 import { getAllData, getData } from '../store/action'
+=======
+import { getAllData, getData, fetchUser } from '../store/action'
+>>>>>>> 13e913d (Actualización)
 import { useDispatch, useSelector } from 'react-redux'
 
 // ** Third Party Components
@@ -56,7 +68,11 @@ const CustomHeader = ({ toggleSidebar, handlePerPage, rowsPerPage, handleFilter,
         >
           <div className='d-flex align-items-center mb-sm-0 mb-1 mr-1'>
             <Label className='mb-0' for='search-invoice'>
+<<<<<<< HEAD
               Search:
+=======
+              Buscar:
+>>>>>>> 13e913d (Actualización)
             </Label>
             <Input
               id='search-invoice'
@@ -64,11 +80,22 @@ const CustomHeader = ({ toggleSidebar, handlePerPage, rowsPerPage, handleFilter,
               type='text'
               value={searchTerm}
               onChange={e => handleFilter(e.target.value)}
+<<<<<<< HEAD
             />
           </div>
           <Button.Ripple color='primary' onClick={toggleSidebar}>
             Add New User
           </Button.Ripple>
+=======
+              placeholder="Buscar... "
+            />
+          </div>
+          <Button.Ripple color='primary' onClick={toggleSidebar}>
+  <FaPlus size={18} className='mr-50' /> 
+  Nuevo Usuario
+</Button.Ripple>
+
+>>>>>>> 13e913d (Actualización)
         </Col>
       </Row>
     </div>
@@ -85,18 +112,28 @@ const UsersList = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const [rowsPerPage, setRowsPerPage] = useState(10)
   const [sidebarOpen, setSidebarOpen] = useState(false)
+<<<<<<< HEAD
   const [currentRole, setCurrentRole] = useState({ value: '', label: 'Select Role' })
   const [currentPlan, setCurrentPlan] = useState({ value: '', label: 'Select Plan' })
   const [currentStatus, setCurrentStatus] = useState({ value: '', label: 'Select Status', number: 0 })
+=======
+  const [currentRole, setCurrentRole] = useState({ value: '', label: 'Selecciona Rol' })
+  const [currentStatus, setCurrentStatus] = useState({ value: '', label: 'Selecciona Estado', number: 0 })
+>>>>>>> 13e913d (Actualización)
 
   // ** Function to toggle sidebar
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen)
 
+<<<<<<< HEAD
   // ** Get data on mount
+=======
+  // ** Get data on mount or when filters change
+>>>>>>> 13e913d (Actualización)
   useEffect(() => {
     dispatch(getAllData())
     dispatch(
       getData({
+<<<<<<< HEAD
         page: currentPage,
         perPage: rowsPerPage,
         role: currentRole.value,
@@ -166,10 +203,26 @@ const UsersList = () => {
   // ** Function in get data on search query change
   const handleFilter = val => {
     setSearchTerm(val)
+=======
+        page: currentPage,             // Paginación: página actual
+        perPage: rowsPerPage,          // Paginación: registros por página
+        tipo_usuario_id: currentRole.value, // Usamos tipo_usuario_id en lugar de role
+        status: currentStatus.value,   // Filtrar por estado
+        q: searchTerm                  // Filtrar por término de búsqueda
+      })
+    )
+  }, [dispatch, currentPage, rowsPerPage, currentRole, currentStatus, searchTerm])
+  
+
+  // ** Function to handle search query change
+  const handleFilter = val => {
+    setSearchTerm(val)  // Actualiza el término de búsqueda
+>>>>>>> 13e913d (Actualización)
     dispatch(
       getData({
         page: currentPage,
         perPage: rowsPerPage,
+<<<<<<< HEAD
         role: currentRole.value,
         currentPlan: currentPlan.value,
         status: currentStatus.value,
@@ -220,6 +273,24 @@ const UsersList = () => {
       return []
     } else {
       return store.allData.slice(0, rowsPerPage)
+=======
+        tipo_usuario_id: currentRole.value, // Mantenemos el filtro de tipo_usuario_id
+        status: currentStatus.value,         // Mantenemos el filtro de estado
+        q: val                               // Actualiza los resultados con el nuevo término de búsqueda
+      })
+    )
+  }
+  
+
+  // ** Table data to render
+  const dataToRender = () => {
+    if (store.data && Array.isArray(store.data)) {
+      return store.data
+    } else if (store.allData && Array.isArray(store.allData.data)) {
+      return store.allData.data
+    } else {
+      return []
+>>>>>>> 13e913d (Actualización)
     }
   }
 
@@ -227,7 +298,11 @@ const UsersList = () => {
     <Fragment>
       <Card>
         <CardHeader>
+<<<<<<< HEAD
           <CardTitle tag='h4'>Search Filter</CardTitle>
+=======
+          <CardTitle tag='h4'>Filtro de Búsqueda</CardTitle>
+>>>>>>> 13e913d (Actualización)
         </CardHeader>
         <CardBody>
           <Row>
@@ -237,6 +312,7 @@ const UsersList = () => {
                 theme={selectThemeColors}
                 className='react-select'
                 classNamePrefix='select'
+<<<<<<< HEAD
                 options={roleOptions}
                 value={currentRole}
                 onChange={data => {
@@ -275,10 +351,21 @@ const UsersList = () => {
                     })
                   )
                 }}
+=======
+                options={[
+                  { value: '', label: 'Todos' },
+                  { value: 1, label: 'Cliente' },
+                  { value: 2, label: 'Adminstrador' },
+                  { value: 3, label: 'Proveedor' }
+                ]}
+                value={currentRole}
+                onChange={data => setCurrentRole(data)} // Actualizamos el rol seleccionado
+>>>>>>> 13e913d (Actualización)
               />
             </Col>
             <Col md='4'>
               <Select
+<<<<<<< HEAD
                 theme={selectThemeColors}
                 isClearable={false}
                 className='react-select'
@@ -298,6 +385,20 @@ const UsersList = () => {
                     })
                   )
                 }}
+=======
+                isClearable={false}
+                theme={selectThemeColors}
+                className='react-select'
+                classNamePrefix='select'
+                options={[
+                  { value: 1, label: 'Activo' },
+                  { value: '', label: 'Todos' },
+                 
+                  { value: 0, label: 'Inactivo' }
+                ]}
+                value={currentStatus}
+                onChange={data => setCurrentStatus(data)} // Actualizamos el estado seleccionado
+>>>>>>> 13e913d (Actualización)
               />
             </Col>
           </Row>
@@ -314,12 +415,30 @@ const UsersList = () => {
           columns={columns}
           sortIcon={<ChevronDown />}
           className='react-dataTable'
+<<<<<<< HEAD
           paginationComponent={CustomPagination}
+=======
+          paginationComponent={() => (
+            <ReactPaginate
+              previousLabel={''}
+              nextLabel={''}
+              pageCount={Math.ceil(store.total / rowsPerPage) || 1}
+              activeClassName='active'
+              forcePage={currentPage - 1}
+              onPageChange={page => setCurrentPage(page.selected + 1)}
+              containerClassName={'pagination react-paginate'}
+            />
+          )}
+>>>>>>> 13e913d (Actualización)
           data={dataToRender()}
           subHeaderComponent={
             <CustomHeader
               toggleSidebar={toggleSidebar}
+<<<<<<< HEAD
               handlePerPage={handlePerPage}
+=======
+              handlePerPage={e => setRowsPerPage(Number(e.target.value))}
+>>>>>>> 13e913d (Actualización)
               rowsPerPage={rowsPerPage}
               searchTerm={searchTerm}
               handleFilter={handleFilter}

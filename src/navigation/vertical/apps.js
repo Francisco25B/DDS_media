@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Mail, MessageSquare, CheckSquare, Calendar, FileText, Circle, ShoppingCart, User } from 'react-feather'
 
 export default [
@@ -8,22 +9,45 @@ export default [
     id: 'email',
     title: 'Email',
     icon: <Mail size={20} />,
+=======
+import { Home, DollarSign, FileText, BarChart, Users, Circle } from 'react-feather'
+
+export default [
+  {
+    header: 'Acciones'
+  },
+  {
+    id: 'email',
+    title: 'Ingresos',
+    icon: <Home size={20} />,  // Ícono de una casa o templo
+>>>>>>> 13e913d (Actualización)
     navLink: '/apps/email'
   },
   {
     id: 'chat',
+<<<<<<< HEAD
     title: 'Chat',
     icon: <MessageSquare size={20} />,
+=======
+    title: 'Egresos',
+    icon: <DollarSign size={20} />,  // Ícono de billetes
+>>>>>>> 13e913d (Actualización)
     navLink: '/apps/chat'
   },
   {
     id: 'todo',
+<<<<<<< HEAD
     title: 'Todo',
     icon: <CheckSquare size={20} />,
+=======
+    title: 'Estado Resultado',
+    icon: <BarChart size={20}/>,  // Ícono de hoja con gráficos
+>>>>>>> 13e913d (Actualización)
     navLink: '/apps/todo'
   },
   {
     id: 'calendar',
+<<<<<<< HEAD
     title: 'Calendar',
     icon: <Calendar size={20} />,
     navLink: '/apps/calendar'
@@ -114,5 +138,16 @@ export default [
         navLink: '/apps/user/edit'
       }
     ]
+=======
+    title: 'Reporte General',
+    icon: <FileText size={20}  />,  // Ícono de gráficos (estadísticas)
+    navLink: '/apps/calendar'
+  },
+  {
+    id: 'list',
+    title: 'Usuarios',
+    icon: <Users size={20} />,
+    navLink: '/apps/user/list'  // Ícono de grupo de personas
+>>>>>>> 13e913d (Actualización)
   }
 ]

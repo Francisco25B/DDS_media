@@ -28,6 +28,7 @@ const IntlDropdown = () => {
 
   return (
     <UncontrolledDropdown href='/' tag='li' className='dropdown-language nav-item'>
+<<<<<<< HEAD
       <DropdownToggle href='/' tag='a' className='nav-link' onClick={e => e.preventDefault()}>
         <ReactCountryFlag
           className='country-flag flag-icon'
@@ -36,6 +37,9 @@ const IntlDropdown = () => {
         />
         <span className='selected-language'>{langObj[intlContext.locale]}</span>
       </DropdownToggle>
+=======
+      
+>>>>>>> 13e913d (Actualización)
       <DropdownMenu className='mt-0' right>
         <DropdownItem href='/' tag='a' onClick={e => handleLangUpdate(e, 'en')}>
           <ReactCountryFlag className='country-flag' countryCode='us' svg />
